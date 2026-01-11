@@ -38,7 +38,9 @@ extern "C"
 {	
 #else // Not C++, must define bool:
 
+#ifdef __STDC_VERSION__ && __STDC_VERSION__ < 202311L
 typedef unsigned int bool;
+#endif // #ifdef __STDC_VERSION__
 
 #endif // #ifdef __cplusplus
 
